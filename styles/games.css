@@ -125,7 +125,12 @@ nav h3 {
 }
 /* gamer-team-section style */
 .gamer-team-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.gamer-team-section img {
+  width: 100%;
 }
 .gamer-team-text {
   text-align: right;
@@ -291,6 +296,7 @@ nav h3 {
   height: 636px;
   background-color: #0b0223;
   color: #fff;
+  margin: -10px;
 }
 
 .gamer {
@@ -303,6 +309,7 @@ nav h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
   padding: 10px;
 }
@@ -318,7 +325,19 @@ nav h3 {
   .play-section,
   .banner-section,
   nav {
-    /* flex-direction: column; */
+    flex-direction: column;
+    height: inherit;
+  }
+  nav > div {
+    margin-inline: auto;
+    margin-left: 50px;
+  }
+  .banner-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .banner-section img {
+    width: 100%;
   }
   .game,
   .gamer {
@@ -333,11 +352,25 @@ nav h3 {
     padding: 5px;
   }
   .banner-img {
-    width: 90%;
+    width: 100%;
+  }
+
+  .play-section {
+    flex-wrap: wrap;
+  }
+
+  .play-section img {
+    width: 100%;
   }
 
   .game-section {
     flex-basis: 33%;
+  }
+  .gamer-team-section {
+    grid-template-columns: 1fr;
+  }
+  .gamer-section {
+    height: 100%;
   }
 }
 /* for tab */
